@@ -12,6 +12,12 @@
             "console": "integratedTerminal",
             "stopOnEntry": false,
             "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "net",
+            "program": "${workspaceFolder}/netModuleMiniProject/net.js"
         }
     ]
 }
