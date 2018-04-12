@@ -1,0 +1,23 @@
+{
+  "name": "practiceNode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akki005/practiceNodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akki005/practiceNodejs/issues"
+  },
+  "homepage": "https://github.com/akki005/practiceNodejs#readme",
+  "dependencies": {
+    "async": "^2.6.0"
+  }
+}
