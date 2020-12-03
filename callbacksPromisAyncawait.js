@@ -71,3 +71,15 @@ async function countOdd() {
 }
 
 countOdd();
+
+function readFile(cb){
+    setTimeout(()=>{
+        cb("done")
+    },10);
+}
+
+console.log(readFile())
+
+readFile.then(()=>{
+    console.log("done")
+})

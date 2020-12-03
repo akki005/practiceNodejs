@@ -19,7 +19,10 @@ server.on('request', function (req, res) {
         'content-type': 'text/plain'
     });
 
-
+    /**
+     * req - http.IncomingMessage -  readable stream
+     * res - http.ServerResponse -  writable stream
+     */
     /**
      * res.write sends data to client in stream instead of sending entire bunch of data at once.
      * res.write will not terminate connection with client we must use res.end to terminate connection with client

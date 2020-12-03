@@ -13,14 +13,8 @@
 
 
 
-
-
-
-
-
-
-let fs=require('fs');
-//Execute below code to understand the setTimeout with 0ms and setImmitdiate. run it multiple time
+let fs = require('fs');
+//Execute below code to understand the setTimeout with 0ms and setImmediate. run it multiple time
 /* function Timers(){
     
     
@@ -39,7 +33,7 @@ Timers(); */
 //By using process.nextTick() we guarantee that fileStat() always runs its callback after the rest of the user's code and before the event loop is allowed to proceed.
 
 
-function fileStat(path,cb){
+/* function fileStat(path,cb){
     if(typeof path !== "string"){
         return cb(new TypeError('Not a string'),null);
         //to make it completely async
@@ -53,12 +47,12 @@ function fileStat(path,cb){
             return cb(null,stat);
         }
     })
-}
+} */
 
 
 // try passing "1" intead of "__dirname".
 //Hello will not be printed to console as fileStat is not an async function in case of path is not a string.
-fileStat(__dirname,(err,stat)=>{
+/* fileStat(__dirname,(err,stat)=>{
     if(err){
         throw err;
     }else{
@@ -66,4 +60,22 @@ fileStat(__dirname,(err,stat)=>{
     }
 });
 
-console.log('Hello');
+console.log('Hello'); */
+
+
+
+
+let bar;
+
+// this has an asynchronous signature, but calls callback synchronously
+function someAsyncApiCall(callback) { 
+    process.nextTick(callback); // write it without process.nexttick
+}
+
+// the callback is called before `someAsyncApiCall` completes.
+someAsyncApiCall(() => {
+    // since someAsyncApiCall has completed, bar hasn't been assigned any value
+    console.log('bar', bar); // undefined
+});
+
+bar = 1;

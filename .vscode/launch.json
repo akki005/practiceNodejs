@@ -18,6 +18,12 @@
             "request": "launch",
             "name": "net",
             "program": "${workspaceFolder}/netModuleMiniProject/net.js"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "tick",
+            "program": "${workspaceFolder}/eventLoop2.js"
         }
     ]
 }
